@@ -2,43 +2,40 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-
 const memorialFont = localFont({
-
   src: "../assets/fonts/MemorialFont.woff2",
-
   variable: "--font-memorial",
-
 });
 
-
 export const metadata: Metadata = {
+  title: 'Gabriel Ganley Memorial',
 
-  title: "Gabriel Ganley Memorial",
+  description:
+    'Um legado que permanece',
 
-  description: "Um legado que permanece",
-
-};
-
+  openGraph: {
+    title: 'Gabriel Ganley Memorial',
+    images: [
+      {
+        url: '/logo/gg-logo.png',
+        width: 1024,
+        height: 1024,
+        alt: 'memorial',
+      },
+    ],
+  },
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-
     <html lang="pt-BR">
-
-      <body className={`${memorialFont.variable}`}>
-
+      <body className={memorialFont.variable}>
         {children}
-
       </body>
-
     </html>
-
   );
-
 }
