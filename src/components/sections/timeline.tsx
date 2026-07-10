@@ -99,9 +99,8 @@ scrollTrigger:{
 
 trigger:section.current,
 
-start:"top center",
-
-end:"bottom center",
+start: "top 75%",
+end: "bottom 35%",
 
 scrub:2
 
@@ -244,7 +243,7 @@ ref={section}
 className="
 relative
 bg-black
-py-40
+py-20 md:py-40
 text-white
 "
 
@@ -280,9 +279,10 @@ A TRAJETÓRIA
 
 className="
 mt-6
-text-5xl
+text-4xl
 font-heading
 uppercase
+sm:text-5xl
 md:text-7xl
 "
 
@@ -312,7 +312,7 @@ mt-32
 
 className="
 absolute
-left-4
+left-5
 top-0
 h-full
 w-[2px]
@@ -345,7 +345,8 @@ bg-white
 <div
 
 className="
-space-y-32
+space-y-16
+md:space-y-32
 "
 
 >
@@ -363,8 +364,10 @@ className="
 timeline-card
 relative
 grid
+gap-8
+pl-12
+md:pl-0
 items-center
-gap-10
 md:grid-cols-2
 "
 >
@@ -376,14 +379,14 @@ md:grid-cols-2
 data-dot
 className="
 absolute
-left-[-7px]
-top-3
+left-0
+top-4
 h-4
 w-4
 rounded-full
 bg-white/40
 md:left-1/2
-md:-translate-x-1/2
+-translate-x-1/2
 "
 />
 
@@ -392,14 +395,20 @@ md:-translate-x-1/2
 <div
 className={`
 space-y-6
-${index % 2 === 0 ? "md:order-1 md:text-right" : "md:order-2"}
+${index % 2 === 0
+ ? "md:order-1 md:text-right"
+ : "md:order-2"}
+
+text-left
 `}
 >
 
   <h3
     className="
 timeline-year
-text-6xl
+text-4xl
+sm:text-5xl
+md:text-6xl
 font-bold
 text-white/20
 "
@@ -410,7 +419,8 @@ text-white/20
   <h4
     className="
 timeline-title
-text-3xl
+text-2xl
+md:text-3xl
 font-bold
 text-white/80
 "
@@ -422,7 +432,8 @@ text-white/80
     className="
 timeline-text
 mt-4
-text-lg
+text-base
+md:text-lg
 leading-relaxed
 text-white/50
 "
@@ -449,7 +460,9 @@ ${index % 2 === 0 ? "md:order-2" : "md:order-1"}
     height={700}
     className="
 timeline-image
-h-[420px]
+h-[260px]
+sm:h-[320px]
+md:h-[420px]
 w-full
 object-cover
 "
